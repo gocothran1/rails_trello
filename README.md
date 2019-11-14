@@ -1,24 +1,13 @@
-# README
+# rails-trello
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is our attempt to create a Trello clone using Ruby on Rails for the backend.
 
-Things you may want to cover:
+Currently working:
+* Display Lists and their Cards from a database
+* Add new Cards to database
+* Re-orderable Cards within the same list (no moving to new list yet)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Todo:
+* Changes to order of Cards within a List are lost on reload
+* Cannot move Cards from one List to another
+* Not able to create new Lists yet from the website
