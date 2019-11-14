@@ -14,121 +14,69 @@
                 flex-direction: row;
                 justify-content: space-around;
                 padding: 20px;
-                
-                
+            }
+            .list {
+                background: #80AEE8;
+                flex-basis: 18%;
+                border-radius: 12px;
+                padding: 5px;
+            }
+            # .columnTwo {
+            #     border: 2px dashed blue;
+            #     background: blue;
+            #     flex-basis: 18%;
+            #     border-radius: 12px;
+            #     padding: 5px;
+            # }
+            # .columnThree {
+            #     border: 2px solid purple;
+            #     background: purple;
+            #     flex-basis: 18%;
+            #     border-radius: 12px;
+            #     padding: 5px;
+            # }
+            # .columnFour {
+            #     border: 2px dotted yellow;
+            #     background: yellow;
+            #     flex-basis: 18%;
+            #     border-radius: 12px;
+            #     padding: 5px;
 
-            }
-            .columnOne {
-                border: 2px dotted lime;
-                background: lime;
-                flex-basis: 18%;
-                border-radius: 12px;
-                
-                padding: 5px;
-                
-            }
-            .columnTwo {
-                border: 2px dashed blue;
-                background: blue;
-                flex-basis: 18%;
-                border-radius: 12px;
-                padding: 5px;
-            }
-            .columnThree {
-                border: 2px solid purple;
-                background: purple;
-                flex-basis: 18%;
-                border-radius: 12px;
-                padding: 5px;
-            }
-            .columnFour {
-                border: 2px dotted yellow;
-                background: yellow;
-                flex-basis: 18%;
-                border-radius: 12px;
-                padding: 5px;
-
-            }
-            .columnFive{
-                border: 2px solid pink;
-                background: pink;
-                flex-basis: 18%;
-                border-radius: 12px;
-                padding: 5px;
-            }
-            .note{
+            # }
+            # .columnFive{
+            #     border: 2px solid pink;
+            #     background: pink;
+            #     flex-basis: 18%;
+            #     border-radius: 12px;
+            #     padding: 5px;
+            # }
+            .card {
                 margin-bottom: 15px;
                 padding: 5px;
                 border:orange 2px solid;
                 background: orange;
                 transition: all 0.5s ease-in-out;
             }
-            .note:hover{
-                border:lightgreen 2px solid;
-                background:lightgreen;
+            .card:hover {
+                background: #FFBE00;
                 box-shadow: 3px 3px 8px;
                 transform: scale(1.2 1.2);
             }
 
         </style>
-
-        <script>
-        function newCard(elem) {
-            var list = elem.parentElement.parentElement;
-            var cardText = elem.parentElement.getElementsByTagName("textarea")[0].value;
-
-            var myNewCard = document.createElement("div");
-            myNewCard.setAttribute("class", "note");
-            myNewCard.innerText = cardText;
-            list.insertBefore(myNewCard, elem.parentElement);
-        }
-         </script>
-
     </head>
     <body>
         <div class="container">
-            <div class="columnOne">
-                <!--3notes in here -->
+            <div class="list">
                 <h2 class="listTitle"> Grocery List </h2>
-                <div class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quisquam?</div>
-                <div class="note">Lorem, ipsum dolor.</div>
-                <div class="note">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-                <div class="note">
+                <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quisquam?</div>
+                <div class="card">Lorem, ipsum dolor.</div>
+                <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                <div class="card">
                     <textarea cols="30" rows="3" placeholder="Enter a new card's text here..."></textarea>
                     <button type="submit" onClick="newCard(this)">Add</button>
                 
                 </div>
-            </div>
-            <div class="columnTwo">
-                    <div class="note">Lorem, ipsum.</div>
-                    <div class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam officia illo, vitae at sunt debitis laudantium repellat quasi?
-                    </div>
-                <!--1note in here-->
-                
-            </div>
-            <div class="columnThree">
-                    <div class="note">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo suscipit reiciendis nobis dolorem quaerat quam, sed maiores eos, non distinctio natus aliquam iste accusamus deleniti.
-                    </div>
-                    <div class="note">
-                        Lorem ipsum dolor sit amet consectetur.
-                    </div>
-                    <div class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa iste, nulla sint temporibus neque! Sit tempora accusamus ratione maiores iure, em nemo optio non ratione?</div>
-                <!--5 notes in here-->
-                
-            </div>
-            <div class="columnFour">
-                    <div class="note">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
-                    <div class="note">Lorem ipsum dolor sit.</div>
-                    <div class="note">Lorem, ipsum dolor.</div>
-                    <div class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id fuga officiis non laudantium suscipit impedit!</div>
-                <!--4 notes in here-->
-                
-            </div>
-            <div class="columnFive">
-                <!--no notes-->
-                <input type="text" id="myinput">
-                <button onClick="add_sticky()">Press Me To Add New Post It</button>
             </div>
         </div>
     </body>
