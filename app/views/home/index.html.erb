@@ -82,9 +82,9 @@
                 <div class="list">
                     <h2><%= list.title %></h2>
 
-                    <% card = Card.find(list.id) %>
-                    <div class="card"><%= card.content %></div>
-    
+                    <% list.cards.each do |card| %>
+                        <div class="card"><%= card.content %></div>
+                    <% end %>
     <!--Person.find(:all, :params => { :title => "CEO" })-->
 
                     <div class="card">
