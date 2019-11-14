@@ -9,7 +9,6 @@
             }
             .container {
                 font-family: 'Schoolbell', cursive;
-                border: 2px solid red;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
@@ -64,20 +63,17 @@
             }
 
         </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+          $( ".list" ).sortable();
+          $( ".list" ).disableSelection();
+        } );
+        </script>
     </head>
     <body>
         <div class="container">
-            <div class="list">
-                <h2 class="listTitle"> Grocery List </h2>
-                <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quisquam?</div>
-                <div class="card">Lorem, ipsum dolor.</div>
-                <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-                <div class="card">
-                    <textarea cols="30" rows="3" placeholder="Enter a new card's text here..."></textarea>
-                    <button type="submit" onClick="newCard(this)">Add</button>
-                </div>
-            </div>
-
             <% @lists.each do |list| %>
                 <div class="list">
                     <h2><%= list.title %></h2>
