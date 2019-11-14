@@ -75,9 +75,24 @@
                 <div class="card">
                     <textarea cols="30" rows="3" placeholder="Enter a new card's text here..."></textarea>
                     <button type="submit" onClick="newCard(this)">Add</button>
-                
                 </div>
             </div>
+
+            <% @lists.each do |list| %>
+                <div class="list">
+                    <h2><%= list.title %></h2>
+
+                    <% card = Card.find(list.id) %>
+                    <div class="card"><%= card.content %></div>
+    
+    <!--Person.find(:all, :params => { :title => "CEO" })-->
+
+                    <div class="card">
+                        <textarea cols="30" rows="3" placeholder="Enter a new card's text here..."></textarea>
+                        <button type="submit" onClick="newCard(this)">Add</button>
+                    </div>
+                </div>
+            <% end %>
         </div>
     </body>
 </html>```
